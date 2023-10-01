@@ -1,0 +1,32 @@
+◆きっかけの起点となるクラス名を記述
+
+fadeInUpTrigger
+
+◆</body>前にJavaScriptを読み込む
+
+①jQuery
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+②jquery.inview
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+
+③自作のJavaScript
+
+<script src="js/2-1.js"></script>
+
+◆自作のJavaScriptに動きの指定を書く
+
+.fadeInUpTrigger
+
+animate__animated animate__fadeInUp
+
+.fadeInDownTrigger
+
+animate__animated animate__fadeInDown
+
+◆CSSに滑らかに出すためのCSSを書く
+
+ opacity:0;

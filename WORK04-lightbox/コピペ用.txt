@@ -1,0 +1,60 @@
+◆<head>タグにLightboxのcssを読み込む
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+
+◆画像を画像リンクのパスが指定されているリンクでくくる
+
+<li><img src="img/img_01.jpg" alt=""></li>
+
+↓
+
+<li><a href="img/img_01.jpg"><img src="img/img_01.jpg" alt=""></a></li>
+
+
+============================================
+
+不安な人は以下をコピペ！
+
+<li><a href="img/img_01.jpg"><img src="img/img_01.jpg" alt=""></a></li>
+<li><a href="img/img_02.jpg"><img src="img/img_02.jpg" alt=""></a></li>
+<li><a href="img/img_03.jpg"><img src="img/img_03.jpg" alt=""></a></li>
+<li><a href="img/img_04.jpg"><img src="img/img_04.jpg" alt=""></a></li>
+<li><a href="img/img_05.jpg"><img src="img/img_05.jpg" alt=""></a></li>
+<li><a href="img/img_06.jpg"><img src="img/img_06.jpg" alt=""></a></li>
+
+============================================
+
+
+◆画像リンクのパスが指定されているリンクに 画像拡大をJavaScriptで指定するためのdata-lightboxを追記
+
+data-lightbox="gallery-list"
+
+<li><a href="img/img_01.jpg"><img src="img/img_01.jpg" alt=""></a></li>
+
+↓
+
+<li><a href="img/img_01.jpg" data-lightbox="gallery-list"><img src="img/img_01.jpg" alt=""></a></li>
+
+============================================
+
+不安な人は以下をコピペ！
+
+<li><a href="img/img_01.jpg" data-lightbox="gallery-list"><img src="img/img_01.jpg" alt=""></a></li>
+<li><a href="img/img_02.jpg" data-lightbox="gallery-list"><img src="img/img_02.jpg" alt=""></a></li>
+<li><a href="img/img_03.jpg" data-lightbox="gallery-list"><img src="img/img_03.jpg" alt=""></a></li>
+<li><a href="img/img_04.jpg" data-lightbox="gallery-list"><img src="img/img_04.jpg" alt=""></a></li>
+<li><a href="img/img_05.jpg" data-lightbox="gallery-list"><img src="img/img_05.jpg" alt=""></a></li>
+<li><a href="img/img_06.jpg" data-lightbox="gallery-list"><img src="img/img_06.jpg" alt=""></a></li>
+
+============================================
+
+◆</body>のslickのJavaScriptの下に、lightboxのJavaScriptを読み込む
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+
+◆自作のJavaScriptに、画像拡大をした際に画像の総数が異なるバグを修正する記述を追記する
+
+$(window).on('load', function () {
+    $('.slick-cloned a').removeAttr('data-lightbox');
+});

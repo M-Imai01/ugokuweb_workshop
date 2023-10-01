@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/*========= 滑らかに出す ===============*/
+
+.fadeInUpTrigger,
+.fadeInDownTrigger{
+/*  opacity:0; */
+   
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+    background: #F2F0E9;
+}
+
+.wrapper{
+    width:80%;
+    margin:0 auto;
+    padding:200px 0;
+    text-align: center;
+}
+
+.wrapper p{
+    margin-bottom: 30px;
+}
+
+img{
+    width:200px;
+    height: auto;
+}
+
+.flex{
+	display:flex;
+	flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box{
+    margin:0 20px;
+}
+
+a{
+	text-decoration: none;
+	display: block;
+	color: #fff;
+}
